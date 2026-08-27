@@ -1,0 +1,37 @@
+.ingredients {
+  list-style-type: square;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  width: 300px;
+  list-style-position: inside;
+}
+.instructions {
+  list-style-type: decimal;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  width: 300px;
+  list-style-position: inside;
+}
+div,
+p {
+  margin-bottom: 10px;
+  color: red;
+  font-size: 16px;
+  background-color: #22288a;
+}
+p {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+.container li {
+    background: peachpuff;
+    border: 3px solid brown;
+    height: 100px;
+    width: 300px;
+    /* flex: 1; */
+}
