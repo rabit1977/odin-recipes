@@ -1,0 +1,36 @@
+html {
+  width: 100%;
+  height: inherit;
+  background: #dddddd;
+}
+
+canvas {
+  display: block;
+}
+#uppercase-btn {
+  position: absolute;
+  top: 5px;
+  left: 200px; 
+}
+
+#uppercase-cats {
+  position: absolute;
+  top: 200px; /* Moves the second list down so it doesn't overlap the first */
+  left: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+body {
+  margin: 0;
+}
+
+button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+#draw-btn {
+  position: absolute;
+  top: 5px;
+  left: 100px; 
+}

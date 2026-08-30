@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation with event listenings</title>
+  </head>
+  <body>
+    <button onclick="alertFunction()">Click Me with onclick</button>
+    <button id="btn">Click Me To</button>
+
+    <div id="container">
+      <button id="one">Click One</button>
+      <button id="two">Click Two</button>
+      <button id="three">Click Three</button>
+    </div>
+    <button id="dark-mode-btn">Toggle Dark Mode</button>
+    <input
+      id="chat-input"
+      type="text"
+      placeholder="Type message and press Enter..."
+    />
+    <p id="chat-log"></p>
+
+    <input id="textBox" type="text" />
+    <div id="output"></div>
+
+    <form action="#">
+      <div>
+        <label for="fname">First name: </label>
+        <input id="fname" type="text" />
+      </div>
+      <div>
+        <label for="lname">Last name: </label>
+        <input id="lname" type="text" />
+      </div>
+      <div>
+        <input id="submit" type="submit" />
+      </div>
+    </form>
+    <p></p>
+
+    <!-- Shopping list -->
+    <h1>My Shopping List</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item" />
+      <button id="add-btn">Add item</button>
+    </div>
+
+    <!-- This is where our JavaScript will inject the new list items -->
+    <ul id="shopping-list"></ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
