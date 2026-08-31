@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Pro</title>
+    <!-- Importing a modern, clean font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- The Glass Game Board -->
+      <div id="game-board" class="glass-panel">
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">
+          Use your mouse or press <strong>R</strong>, <strong>P</strong>,
+          <strong>S</strong>
+        </p>
+
+        <div id="scoreboard">
+          <div class="score-card">
+            <span class="score-label">Player</span>
+            <span id="human-score" class="score-number">0</span>
+          </div>
+          <div class="score-divider"> - </div>
+          <div class="score-card">
+            <span class="score-label">Computer</span>
+            <span id="comp-score" class="score-number">0</span>
+          </div>
+        </div>
+
+        <h3 id="round-result">Make your choice to begin!</h3>
+
+        <div id="game-controls">
+          <button id="rock" class="play-btn">✊<br />Rock</button>
+          <button id="paper" class="play-btn">✋<br />Paper</button>
+          <button id="scissors" class="play-btn">✌️<br />Scissors</button>
+        </div>
+
+        <div id="reset-container"></div>
+      </div>
+
+      <!-- The Glass History Panel -->
+      <div id="history-container" class="glass-panel">
+        <h3>Match History</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+
+    <script src="advanced-rsp-index.js"></script>
+  </body>
+</html>
