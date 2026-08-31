@@ -20,7 +20,8 @@
  border: 1px solid #ddd;
   background-color: #fff;
 }
+/* removed the hovered effect from index.js
 
-.grid-square.hovered {
+/* .grid-square.hovered {
   background-color: #333;
-} 
+} */
