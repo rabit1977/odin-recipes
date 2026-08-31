@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -12,12 +17,10 @@
 }
 
 .grid-square {
-  width: 60px;   /* 960px / 16 */
-  height: 60px;
-  border: 1px solid #ddd;
+ border: 1px solid #ddd;
   background-color: #fff;
 }
 
 .grid-square.hovered {
-    background-color: #333;
-}
+  background-color: #333;
+} 
