@@ -20,8 +20,6 @@ function createGrid(size) {
     let opacity = 0;
 
     square.addEventListener('mouseover', () => {
-   //  square.classList.add('hovered'); with hovered effect
-
       if (opacity === 0) {
         square.style.backgroundColor = getRandomColor();
       }
@@ -29,11 +27,7 @@ function createGrid(size) {
       square.style.opacity = opacity;
     });
 
-    // uncommment this to apply mouseleave function
-    // square.addEventListener('mouseleave', () => {
-    //   square.classList.remove('hovered');
-    // });
-
+   
     container.appendChild(square);
   }
 }
@@ -55,3 +49,5 @@ function resetGrid() {
 document.querySelector('#new-grid-btn').addEventListener('click', resetGrid);
 
 createGrid(16);
+
+
