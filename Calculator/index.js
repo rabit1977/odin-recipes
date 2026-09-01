@@ -136,4 +136,12 @@ operatorButtons.forEach(button => {
 equalsButton.addEventListener("click", handleEquals);
 clearButton.addEventListener("click", clearAll);
 
+document.addEventListener("keydown", (e) => {
+  const key = e.key;
+  if (/[0-9]/.test(key) || key === ".") inputDigit(key);
+  else if (["+", "-", "*", "/"].includes(key)) handleOperator(key);
+  else if (key === "Enter" || key === "=") handleEquals();
+  else if (key === "Escape") clearAll();
+});
+
 updateDisplay();
