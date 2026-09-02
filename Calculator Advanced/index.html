@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="calculator">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        🌙
+      </button>
+
       <div class="expression" id="expression"></div>
-      <div class="display" id="display">0</div>
+      <div class="display-row">
+        <span class="memory-indicator" id="memoryIndicator">M</span>
+        <div class="display" id="display">0</div>
+      </div>
 
       <div class="buttons">
+        <button class="btn memory" id="memClear">MC</button>
+        <button class="btn memory" id="memRecall">MR</button>
+        <button class="btn memory" id="memAdd">M+</button>
+        <button class="btn memory" id="memSubtract">M-</button>
+
         <button class="btn clear" id="clear">AC</button>
         <button class="btn backspace" id="backspace">⌫</button>
         <button class="btn percent" id="percent">%</button>
@@ -36,6 +47,14 @@
         <button class="btn digit" data-digit="0">0</button>
         <button class="btn digit" data-digit=".">.</button>
         <button class="btn equals" id="equals">=</button>
+      </div>
+
+      <div class="history-panel">
+        <div class="history-header">
+          <span>History</span>
+          <button class="history-clear" id="historyClear">Clear</button>
+        </div>
+        <ul class="history-list" id="historyList"></ul>
       </div>
     </div>
 
