@@ -1,0 +1,168 @@
+/* --- Global Reset & Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  height: 100vh;
+  display: flex;
+  background-color: #F9FAFB;
+}
+
+.page-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Left Sidebar (Image & Logo) --- */
+.sidebar {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-image: url('halie-west-25xggax4bSA-unsplash.jpg'); /* Replace with your desired image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo-wrapper {
+  margin-top: 25vh; /* Pushes the logo down the page slightly */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 60px;
+}
+
+.logo-text {
+  /* You can import the Norse Bold font using @font-face if you have the file */
+  font-family: 'Norse Bold', sans-serif;
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* --- Right Content Area --- */
+.main-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 40px 80px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #111827;
+}
+
+.intro-section p {
+  margin-bottom: 20px;
+}
+
+/* Form Section */
+.form-section {
+  background-color: white;
+  padding: 30px 80px 40px 80px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Slight shadow to separate from background */
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.form-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4B5563;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-group input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Input Pseudo-classes (Per Assignment Requirements) */
+.input-group input:focus {
+  border-color: blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+}
+
+/* Targets password inputs specifically to apply the red border when requirements aren't met */
+.input-group input[type="password"]:user-invalid {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+/* Action Section (Button & Login Link) */
+.action-section {
+  padding: 40px 80px;
+}
+
+.action-section button {
+  background-color: #596D48; /* Exact color from assignment */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 15px 45px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+  margin-bottom: 25px;
+}
+
+.action-section button:hover {
+  background-color: #475839;
+}
+
+.login-link {
+  font-size: 1rem;
+  color: #111827;
+}
+
+.login-link a {
+  color: #596D48;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

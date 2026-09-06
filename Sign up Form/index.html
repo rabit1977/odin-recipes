@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Sign-up Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-container">
+    
+    <!-- Left Sidebar with Background Image -->
+    <div class="sidebar">
+      <div class="logo-wrapper">
+        <!-- Replace with the Odin logo image if you have it downloaded -->
+        <img src="odin-logo.png" alt="Odin Logo" class="logo-img">
+        <h1 class="logo-text">ODIN</h1>
+      </div>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="main-content">
+      
+      <!-- Top Intro Text -->
+      <div class="intro-section">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <strong>now</strong> to get started.</p>
+        <p>You know you want to.</p>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-section">
+        <h2>Let's do this!</h2>
+        <form id="signup-form" action="#" method="POST">
+          <div class="form-row">
+            <div class="input-group">
+              <label for="first_name">First Name</label>
+              <input type="text" id="first_name" name="first_name" placeholder="Thor">
+            </div>
+            <div class="input-group">
+              <label for="last_name">Last Name</label>
+              <input type="text" id="last_name" name="last_name" placeholder="Odinson">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="input-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="password">Password</label>
+              <!-- Adding 'required' and 'minlength' to trigger the :user-invalid state -->
+              <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <div class="input-group">
+              <label for="confirm_password">Confirm Password</label>
+              <input type="password" id="confirm_password" name="confirm_password" required minlength="8">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Bottom Action Section -->
+      <div class="action-section">
+        <button type="submit" form="signup-form">Create Account</button>
+        <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
