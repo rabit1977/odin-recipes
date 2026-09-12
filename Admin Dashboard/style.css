@@ -280,6 +280,7 @@ h3 {
   /* truncates gracefully with an ellipsis instead of hard-clipping mid-word
        if a card gets too short to show the full description */
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
