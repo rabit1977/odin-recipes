@@ -1,0 +1,352 @@
+/* --- VARIABLES & RESET --- */
+:root {
+  --primary-blue: #1992d4;
+  --bg-gray: #e2e8f0;
+  --card-white: #ffffff;
+  --text-dark: #0f172a;
+  --text-gray: #64748b;
+  --border-accent: #f59e0b;
+  --font-main: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-gray);
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden; /* nothing on the page ever scrolls */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- MAIN GRID LAYOUT --- */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh; /* fixed frame — can't grow past the screen */
+  overflow: hidden;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.sidebar-brand i {
+  font-size: 2rem;
+}
+
+.sidebar-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.sidebar-nav i {
+  font-size: 1.4rem;
+}
+
+.bottom-nav {
+  margin-top: 20px;
+}
+
+/* --- HEADER --- */
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: var(--card-white);
+  padding: 15px 40px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Header Top */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.search-bar input {
+  border: none;
+  background-color: var(--bg-gray);
+  border-radius: 20px;
+  padding: 8px 15px;
+  width: 60%;
+  outline: none;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+}
+
+/* Header Bottom */
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.greeting-text p {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.greeting-text h1 {
+  font-size: 1.4rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #157bb5;
+}
+
+/* Avatars */
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fcd34d;
+  object-fit: cover;
+}
+
+.avatar-large {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fcd34d;
+  object-fit: cover;
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 30px;
+  height: 100%;
+  min-height: 0; /* lets this row respect its 1fr track instead of growing past it */
+  overflow: hidden;
+
+  /* Using minmax prevents the columns from blowing out on smaller screens */
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr);
+  gap: 30px;
+  align-items: stretch; /* both columns match height */
+}
+
+.projects-section {
+  grid-column: 1 / 2;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.side-section {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.side-section > h3:first-child {
+  font-size: 1.2rem;
+  flex-shrink: 0; /* heading keeps its natural size; the panel below it flexes */
+}
+.announcements-panel {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  flex-shrink: 0; /* heading keeps its natural size; the panel below it flexes */
+}
+
+/* Projects Grid */
+.projects-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: var(--card-white);
+  border-radius: 8px;
+  border-left: 8px solid var(--border-accent);
+  padding: 25px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0; /* lets the card actually shrink to its 1fr row share */
+  overflow: hidden;
+}
+
+.card-content {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.card-content h4 {
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  /* truncates gracefully with an ellipsis instead of hard-clipping mid-word
+       if a card gets too short to show the full description */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.card-actions i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* Side Sections */
+.panel {
+  background-color: var(--card-white);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 0; /* announcements + trending panels split the remaining height evenly */
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Announcements */
+.announcement-item h5 {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.announcement-item p {
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  line-height: 1.4;
+}
+
+.announcements-panel hr {
+  border: 0;
+  border-top: 1px solid var(--bg-gray);
+  margin: 15px 0;
+}
+
+/* Trending */
+.trending-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trending-user {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.trending-project {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
