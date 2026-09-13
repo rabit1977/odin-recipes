@@ -24,7 +24,7 @@ body {
 html,
 body {
   height: 100%;
-  overflow: hidden; /* nothing on the page ever scrolls */
+  /* overflow: hidden; nothing on the page ever scrolls */
 }
 
 ul {
@@ -41,7 +41,7 @@ a {
   display: grid;
   grid-template-columns: 250px 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh; /* fixed frame — can't grow past the screen */
+  height: 100%; /* fixed frame — can't grow past the screen */
   overflow: hidden;
 }
 
@@ -261,7 +261,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   min-height: 0; /* lets the card actually shrink to its 1fr row share */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .card-content {

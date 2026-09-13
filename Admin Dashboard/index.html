@@ -1,203 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <!-- Google Fonts: Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Material Design Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="dashboard-container">
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <i class="mdi mdi-view-dashboard"></i>
-                <h2>Dashboard</h2>
-            </div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li><a href="#"><i class="mdi mdi-home"></i> Home</a></li>
-                    <li><a href="#"><i class="mdi mdi-card-account-details-outline"></i> Profile</a></li>
-                    <li><a href="#"><i class="mdi mdi-message-outline"></i> Messages</a></li>
-                    <li><a href="#"><i class="mdi mdi-clock-time-three-outline"></i> History</a></li>
-                    <li><a href="#"><i class="mdi mdi-file-multiple"></i> Tasks</a></li>
-                    <li><a href="#"><i class="mdi mdi-account-group"></i> Communities</a></li>
-                </ul>
-            </nav>
-            <nav class="sidebar-nav bottom-nav">
-                <ul>
-                    <li><a href="#"><i class="mdi mdi-cog"></i> Settings</a></li>
-                    <li><a href="#"><i class="mdi mdi-help-box"></i> Support</a></li>
-                    <li><a href="#"><i class="mdi mdi-shield-check"></i> Privacy</a></li>
-                </ul>
-            </nav>
-        </aside>
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <i class="mdi mdi-view-dashboard"></i>
+          <h2>Dashboard</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#"><i class="mdi mdi-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="mdi mdi-card-account-details-outline"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="mdi mdi-message-outline"></i> Messages</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="mdi mdi-clock-time-three-outline"></i> History</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="mdi mdi-file-multiple"></i> Tasks</a>
+            </li>
+            <li>
+              <a href="#"><i class="mdi mdi-account-group"></i> Communities</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="sidebar-nav bottom-nav">
+          <ul>
+            <li>
+              <a href="#"><i class="mdi mdi-cog"></i> Settings</a>
+            </li>
+            <li>
+              <a href="#"><i class="mdi mdi-help-box"></i> Support</a>
+            </li>
+            <li>
+              <a href="#"><i class="mdi mdi-shield-check"></i> Privacy</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-        <!-- HEADER -->
-        <header class="header">
-            <div class="header-top">
-                <div class="search-bar">
-                    <i class="mdi mdi-magnify"></i>
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div class="user-menu">
-                    <i class="mdi mdi-bell-ring-outline"></i>
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan" alt="Avatar" class="avatar-small">
-                    <span class="username">Morgan Oakley</span>
-                </div>
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-top">
+          <div class="search-bar">
+            <i class="mdi mdi-magnify"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="user-menu">
+            <i class="mdi mdi-bell-ring-outline"></i>
+            <img
+              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan"
+              alt="Avatar"
+              class="avatar-small"
+            />
+            <span class="username">Morgan Oakley</span>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="greeting">
+            <img
+              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan"
+              alt="Large Avatar"
+              class="avatar-large"
+            />
+            <div class="greeting-text">
+              <p>Hi there,</p>
+              <h1>Morgan Oakley (@morgan)</h1>
             </div>
-            <div class="header-bottom">
-                <div class="greeting">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan" alt="Large Avatar" class="avatar-large">
-                    <div class="greeting-text">
-                        <p>Hi there,</p>
-                        <h1>Morgan Oakley (@morgan)</h1>
-                    </div>
-                </div>
-                <div class="header-actions">
-                    <button class="btn">New</button>
-                    <button class="btn">Upload</button>
-                    <button class="btn">Share</button>
-                </div>
-            </div>
-        </header>
+          </div>
+          <div class="header-actions">
+            <button class="btn">New</button>
+            <button class="btn">Upload</button>
+            <button class="btn">Share</button>
+          </div>
+        </div>
+      </header>
 
-        <!-- MAIN CONTENT -->
-        <main class="main-content">
-            
-            <!-- LEFT COLUMN: PROJECTS -->
-            <div class="projects-section">
-                <h3>Your Projects</h3>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="card-content">
-                            <h4>Super Cool Project</h4>
-                            <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-                        </div>
-                        <div class="card-actions">
-                            <i class="mdi mdi-star-plus-outline"></i>
-                            <i class="mdi mdi-eye-plus-outline"></i>
-                            <i class="mdi mdi-source-fork"></i>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-content">
-                            <h4>Less Cool Project</h4>
-                            <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor.</p>
-                        </div>
-                        <div class="card-actions">
-                            <i class="mdi mdi-star-plus-outline"></i>
-                            <i class="mdi mdi-eye-plus-outline"></i>
-                            <i class="mdi mdi-source-fork"></i>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-content">
-                            <h4>Impossible App</h4>
-                            <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
-                        </div>
-                        <div class="card-actions">
-                            <i class="mdi mdi-star-plus-outline"></i>
-                            <i class="mdi mdi-eye-plus-outline"></i>
-                            <i class="mdi mdi-source-fork"></i>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-content">
-                            <h4>Easy Peasy App</h4>
-                            <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo.</p>
-                        </div>
-                        <div class="card-actions">
-                            <i class="mdi mdi-star-plus-outline"></i>
-                            <i class="mdi mdi-eye-plus-outline"></i>
-                            <i class="mdi mdi-source-fork"></i>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-content">
-                            <h4>Ad Blocker</h4>
-                            <p>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.</p>
-                        </div>
-                        <div class="card-actions">
-                            <i class="mdi mdi-star-plus-outline"></i>
-                            <i class="mdi mdi-eye-plus-outline"></i>
-                            <i class="mdi mdi-source-fork"></i>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-content">
-                            <h4>Money Maker</h4>
-                            <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex.</p>
-                        </div>
-                        <div class="card-actions">
-                            <i class="mdi mdi-star-plus-outline"></i>
-                            <i class="mdi mdi-eye-plus-outline"></i>
-                            <i class="mdi mdi-source-fork"></i>
-                        </div>
-                    </div>
-                </div>
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- LEFT COLUMN: PROJECTS -->
+        <div class="projects-section">
+          <h3>Your Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="card-content">
+                <h4>Super Cool Project</h4>
+                <p>
+                  Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                  nibh erat, id facilisis felis accumsan nec.
+                </p>
+              </div>
+              <div class="card-actions">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
-
-            <!-- RIGHT COLUMN: SIDE SECTION -->
-            <div class="side-section">
-                <h3>Announcements</h3>
-                <div class="panel announcements-panel">
-                    <div class="announcement-item">
-                        <h5>Site Maintenance</h5>
-                        <p>Vestibulum condimentum tellus lacus, in accumsan elit maximus ac. Donec hendrerit sodales congue...</p>
-                    </div>
-                    <hr>
-                    <div class="announcement-item">
-                        <h5>Community Share Day</h5>
-                        <p>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan porttitor...</p>
-                    </div>
-                    <hr>
-                    <div class="announcement-item">
-                        <h5>Updated Privacy Policy</h5>
-                        <p>Phasellus efficitur nisl eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
-                    </div>
-                </div>
-
-                <h3>Trending</h3>
-                <div class="panel trending-panel">
-                    <div class="trending-item">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tegan" alt="Tegan" class="avatar-small">
-                        <div>
-                            <p class="trending-user">@tegan</p>
-                            <p class="trending-project">World Peace Builder</p>
-                        </div>
-                    </div>
-                    <div class="trending-item">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan" alt="Morgan" class="avatar-small">
-                        <div>
-                            <p class="trending-user">@morgan</p>
-                            <p class="trending-project">Super Cool Project</p>
-                        </div>
-                    </div>
-                    <div class="trending-item">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kendall" alt="Kendall" class="avatar-small">
-                        <div>
-                            <p class="trending-user">@kendall</p>
-                            <p class="trending-project">Life Changing App</p>
-                        </div>
-                    </div>
-                    <div class="trending-item">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="Alex" class="avatar-small">
-                        <div>
-                            <p class="trending-user">@alex</p>
-                            <p class="trending-project">No Traffic Maker</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="project-card">
+              <div class="card-content">
+                <h4>Less Cool Project</h4>
+                <p>
+                  Nullam condimentum ipsum ut lectus vehicula consectetur.
+                  Quisque sed dolor tincidunt, consectetur sapien et, facilisis
+                  dolor.
+                </p>
+              </div>
+              <div class="card-actions">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
             </div>
-            
-        </main>
+            <div class="project-card">
+              <div class="card-content">
+                <h4>Impossible App</h4>
+                <p>
+                  In hac habitasse platea dictumst. Vivamus dictum rutrum arcu,
+                  a placerat velit sagittis id.
+                </p>
+              </div>
+              <div class="card-actions">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="card-content">
+                <h4>Easy Peasy App</h4>
+                <p>
+                  Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim
+                  urna eget accumsan aliquam. Curabitur dignissim nisi in tortor
+                  commodo.
+                </p>
+              </div>
+              <div class="card-actions">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="card-content">
+                <h4>Ad Blocker</h4>
+                <p>
+                  Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus
+                  vel, pharetra hendrerit felis. Aliquam sed malesuada eros.
+                </p>
+              </div>
+              <div class="card-actions">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="card-content">
+                <h4>Money Maker</h4>
+                <p>
+                  Praesent convallis, libero quis congue elementum, nunc ante
+                  faucibus sapien, ac scelerisque tortor purus sit amet ex.
+                </p>
+              </div>
+              <div class="card-actions">
+                <i class="mdi mdi-star-plus-outline"></i>
+                <i class="mdi mdi-eye-plus-outline"></i>
+                <i class="mdi mdi-source-fork"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: SIDE SECTION -->
+        <div class="side-section">
+          <h3>Announcements</h3>
+          <div class="panel announcements-panel">
+            <div class="announcement-item">
+              <h5>Site Maintenance</h5>
+              <p>
+                Vestibulum condimentum tellus lacus, in accumsan elit maximus
+                ac. Donec hendrerit sodales congue...
+              </p>
+            </div>
+            <hr />
+            <div class="announcement-item">
+              <h5>Community Share Day</h5>
+              <p>
+                Nam vel lectus tincidunt, rutrum nulla eu, ornare libero.
+                Aliquam dictum accumsan porttitor...
+              </p>
+            </div>
+            <hr />
+            <div class="announcement-item">
+              <h5>Updated Privacy Policy</h5>
+              <p>
+                Phasellus efficitur nisl eget elit consectetur, eget condimentum
+                ante auctor. Cras fringilla sagittis sem in mattis...
+              </p>
+            </div>
+          </div>
+
+          <h3>Trending</h3>
+          <div class="panel trending-panel">
+            <div class="trending-item">
+              <img
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tegan"
+                alt="Tegan"
+                class="avatar-small"
+              />
+              <div>
+                <p class="trending-user">@tegan</p>
+                <p class="trending-project">World Peace Builder</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <img
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan"
+                alt="Morgan"
+                class="avatar-small"
+              />
+              <div>
+                <p class="trending-user">@morgan</p>
+                <p class="trending-project">Super Cool Project</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <img
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kendall"
+                alt="Kendall"
+                class="avatar-small"
+              />
+              <div>
+                <p class="trending-user">@kendall</p>
+                <p class="trending-project">Life Changing App</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <img
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+                alt="Alex"
+                class="avatar-small"
+              />
+              <div>
+                <p class="trending-user">@alex</p>
+                <p class="trending-project">No Traffic Maker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
