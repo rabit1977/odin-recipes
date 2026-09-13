@@ -101,6 +101,7 @@ body {
 .book-row:focus-within .book-actions {
   opacity: 1;
   transform: translateX(0);
+  
 }
 
 @media (hover: none) {
