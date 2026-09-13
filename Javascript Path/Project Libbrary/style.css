@@ -1,0 +1,223 @@
+:root {
+  --paper: #f6f4ef;
+  --ink: #211f1b;
+  --muted: #86807a;
+  --line: #e4e0d8;
+  --accent-read: #2f6f52;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.top h1 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.ghost-btn {
+  background: none;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ghost-btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.shelf {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.book-title {
+  margin: 0 0 0.2rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.1rem;
+}
+
+.book-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.book-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.book-row:hover .book-actions,
+.book-row:focus-within .book-actions {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (hover: none) {
+  .book-actions {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.read-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+}
+
+.read-toggle.is-read {
+  border-color: var(--accent-read);
+  color: var(--accent-read);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  color: #a33;
+}
+
+.empty-state {
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+dialog#book-dialog {
+  width: min(90vw, 380px);
+  border: none;
+  border-radius: 3px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+dialog::backdrop {
+  background: rgba(33, 31, 27, 0.35);
+}
+
+#book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+#book-form input[type="text"],
+#book-form input[type="number"] {
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.4rem 0.1rem;
+  outline: none;
+}
+
+#book-form input[type="text"]:focus,
+#book-form input[type="number"]:focus {
+  border-bottom-color: var(--ink);
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.solid-btn {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  color: var(--paper);
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+
+.solid-btn:hover {
+  opacity: 0.85;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
