@@ -1,0 +1,209 @@
+:root {
+  --bg: #15171c;
+  --surface: #1b1e25;
+  --line: #2c303a;
+  --text: #e7e5e0;
+  --muted: #7d8290;
+  --x-color: #6ee7d0;
+  --o-color: #a5b4fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+  width: min(90vw, 420px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.setup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 0.6rem;
+  width: 100%;
+}
+
+.setup input,
+.setup select {
+  flex: 1 1 140px;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.1rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.setup input::placeholder {
+  color: var(--muted);
+}
+
+.setup input:focus,
+.setup select:focus {
+  border-bottom-color: var(--text);
+}
+
+.setup .btn {
+  flex: 1 1 100%;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--text);
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.score {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+#score-x {
+  color: var(--x-color);
+}
+
+#score-o {
+  color: var(--o-color);
+}
+
+.score-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.status {
+  margin: 0;
+  min-height: 1.2em;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.board[aria-busy="true"] {
+  opacity: 0.85;
+}
+
+.cell {
+  background: var(--surface);
+  border: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-size: clamp(2rem, 10vw, 3rem);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+.cell:not(:disabled):hover,
+.cell:not(:disabled):focus-visible {
+  background: var(--line);
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cell.mark-x {
+  color: var(--x-color);
+}
+
+.cell.mark-o {
+  color: var(--o-color);
+}
+
+.cell.win {
+  background: var(--line);
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+.cell.pop {
+  animation: pop 0.15s ease;
+}
+
+.round-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cell.pop {
+    animation: none;
+  }
+}
